@@ -207,7 +207,28 @@
       #site-nav .nav-cta{color:white;text-align:center}
     }
     @media(max-width:520px){.blog-tools{flex-direction:column}.blog-tools input,.blog-tools select{flex:none;width:100%;max-width:none}.blog-dialog{padding:22px}}
-  </style>
+  
+    /* Netlifyお問い合わせフォーム */
+    .contact-form-wrap{margin:26px auto 0;max-width:760px;text-align:left;background:#fff;color:var(--text);padding:clamp(22px,4vw,38px);border-radius:22px;box-shadow:var(--shadow)}
+    .contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+    .contact-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+    .contact-field.full,.contact-submit,.contact-agree{grid-column:1/-1}
+    .contact-field label,.contact-agree label{font-weight:700;color:var(--navy)}
+    .contact-field input,.contact-field select,.contact-field textarea{width:100%;font:inherit;color:var(--text);padding:11px 13px;border:1px solid #b8c5d0;border-radius:10px;background:#fff}
+    .contact-field textarea{min-height:150px;resize:vertical}
+    .contact-field input:focus-visible,.contact-field select:focus-visible,.contact-field textarea:focus-visible{outline:3px solid rgba(35,75,109,.22);border-color:var(--navy)}
+    .contact-required{color:#a33131;font-size:.8rem;margin-left:5px}
+    .contact-agree{display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
+    .contact-agree input{margin-top:7px;flex:none;width:17px;height:17px}
+    .contact-agree label{font-weight:400}
+    .contact-submit{display:flex;flex-direction:column;align-items:center;gap:8px}
+    .contact-submit button{border:0;cursor:pointer;font:inherit;min-width:230px}
+    .contact-submit small{color:var(--muted);text-align:center}
+    .contact-form-wrap .contact-intro{color:var(--muted);font-size:.92rem;margin:0 0 23px}
+    .contact-honeypot{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
+    @media(max-width:600px){.contact-form{grid-template-columns:1fr}.contact-field{grid-column:1/-1}}
+
+</style>
 </head>
 <body>
 
@@ -439,13 +460,53 @@
     <div id="blog-dialog-body" class="blog-dialog-body"></div>
   </dialog>
 
-  <section id="contact">
+  <section id="contact" class="bg-soft">
     <div class="container">
-      <div class="cta">
-        <h2>税務・会計のお悩み、ご相談ください。</h2>
-        <p>初回相談・お見積りについてはお気軽にお問い合わせください。</p>
-        <a class="btn-primary" href="mailto:yamada-kaikeijimusho@jcom.zaq.ne.jp?subject=%E7%A8%8E%E5%8B%99%E3%83%BB%E4%BC%9A%E8%A8%88%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">メールで問い合わせる</a>
-        <p class="contact-note">ご相談内容とご希望の連絡方法を添えてお送りください。</p>
+      <div class="section-head">
+        <div class="eyebrow">CONTACT</div>
+        <h2>お問い合わせ・ご相談</h2>
+        <p>税務・会計に関するご相談は、下記フォームからお送りください。</p>
+      </div>
+      <div class="contact-form-wrap">
+        <p class="contact-intro">必要事項をご入力のうえ送信してください。内容を確認後、折り返しご連絡いたします。<br>※フォームからの送信だけで顧問契約が成立することはありません。</p>
+        <form class="contact-form" name="tax-office-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="tax-office-contact">
+          <p class="contact-honeypot"><label>この欄は空欄にしてください <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="contact-field">
+            <label for="contact-name">お名前 <span class="contact-required">必須</span></label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+          </div>
+          <div class="contact-field">
+            <label for="contact-email">メールアドレス <span class="contact-required">必須</span></label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          </div>
+          <div class="contact-field">
+            <label for="contact-phone">電話番号（任意）</label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+          </div>
+          <div class="contact-field">
+            <label for="contact-category">ご相談の種類</label>
+            <select id="contact-category" name="topic">
+              <option value="税務相談">税務相談</option>
+              <option value="会計・記帳">会計・記帳</option>
+              <option value="決算・確定申告">決算・確定申告</option>
+              <option value="顧問契約">顧問契約</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="contact-field full">
+            <label for="contact-message">ご相談内容 <span class="contact-required">必須</span></label>
+            <textarea id="contact-message" name="message" maxlength="5000" required placeholder="ご相談内容をご記入ください。個人番号（マイナンバー）やパスワードなどの機密情報は入力しないでください。"></textarea>
+          </div>
+          <div class="contact-agree">
+            <input id="contact-consent" name="consent" value="同意する" type="checkbox" required>
+            <label for="contact-consent">入力情報はお問い合わせへの回答・連絡のために利用されることに同意します。<span class="contact-required">必須</span></label>
+          </div>
+          <div class="contact-submit">
+            <button class="btn-primary" type="submit">お問い合わせを送信する</button>
+            <small>送信後に受付完了画面が表示されます。返信は営業時間内に順次対応します。</small>
+          </div>
+        </form>
       </div>
     </div>
   </section>
