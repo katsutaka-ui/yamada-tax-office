@@ -1,0 +1,36 @@
+media: media
+
+content:
+  - name: posts
+    label: ブログ記事
+    type: collection
+    path: posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 記事タイトル
+        type: string
+        required: true
+      - name: date
+        label: 投稿日
+        type: date
+        required: true
+      - name: category
+        label: カテゴリー
+        type: select
+        options:
+          values:
+            - 税務情報
+            - 会計実務
+            - お知らせ
+            - その他
+      - name: body
+        label: 記事本文
+        type: rich-text
