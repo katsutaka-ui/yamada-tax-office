@@ -18,6 +18,7 @@ content:
         label: 記事タイトル
         type: string
         required: true
+        
       - name: date
         label: 投稿日
         type: date
