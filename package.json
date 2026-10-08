@@ -1,0 +1,8 @@
+{
+  "name": "yamada-tax-office-blog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}
