@@ -1,4 +1,4 @@
-[index.html](https://github.com/user-attachments/files/33292767/index.html)
+[Uploading index.html…]()
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -113,7 +113,6 @@
       border-radius:16px;background:#fff;
     }
     .service-item strong{display:block;color:var(--navy);font-size:1.02rem}
-    .price-wrap{overflow:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
     table{width:100%;border-collapse:collapse;min-width:680px}
     th,td{padding:18px 20px;text-align:left;border-bottom:1px solid var(--line)}
     th{background:#f4f7f9;color:var(--navy)}
@@ -260,6 +259,7 @@
     <nav id="site-nav">
       <a href="#strength">選ばれる理由</a>
       <a href="#service">業務内容</a>
+
       <a href="#profile">事務所紹介</a>
       <a href="#blog">ブログ</a>
       <a href="#contact" class="nav-cta">お問い合わせ</a>
