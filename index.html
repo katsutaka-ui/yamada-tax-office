@@ -449,7 +449,7 @@
       <p id="blog-result" class="blog-result" aria-live="polite"></p>
       <div id="blog-list" class="blog-grid" aria-live="polite"></div>
       <details id="blog-archive" style="margin-top:28px" hidden>
-        <summary id="blog-archive-heading">過去の動画</summary>
+        <summary id="blog-archive-heading">過去のブログ</summary>
         <div id="blog-archive-list" class="blog-grid" style="margin-top:20px"></div>
       </details>
     </div>
@@ -617,7 +617,7 @@
     const latest = posts.slice(0, 3);
     const older = visible.filter(post => !latest.includes(post));
     archive.hidden = older.length === 0;
-    byId('blog-archive-heading').textContent = `過去の動画（${older.length}件）`;
+    byId('blog-archive-heading').textContent = `過去のブログ（${older.length}件）`;
     byId('blog-result').textContent = posts.length ? `${visible.length}件の記事：最新${visible.length - older.length}件を表示、過去${older.length}件` : '';
     if (posts.length && !visible.length){list.append(el('p','該当する記事がありません。検索条件を変更してください。','blog-empty'));return;}
     if (!posts.length) {list.append(el('p','記事は準備中です。公開までしばらくお待ちください。','blog-empty')); return;}
