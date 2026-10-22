@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="山田勝隆税理士事務所のブログ。税務・会計のお役立ち情報、事務所からのお知らせ、日々の出来事を掲載しています。" />
+  <title>ブログ・お知らせ｜山田勝隆税理士事務所</title>
+  <link rel="canonical" href="https://animated-kringle-8e5846.netlify.app/blog.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="山田勝隆税理士事務所">
+  <meta property="og:title" content="ブログ・お知らせ｜山田勝隆税理士事務所">
+  <meta property="og:description" content="税務・会計の情報と事務所からのお知らせをお届けします。">
+  <meta property="og:url" content="https://animated-kringle-8e5846.netlify.app/blog.html">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root{
+      --navy:#17324d;
+      --navy2:#234b6d;
+      --gold:#c8a76a;
+      --bg:#f7f8fa;
+      --text:#26323d;
+      --muted:#6b7680;
+      --white:#ffffff;
+      --line:#e3e7eb;
+      --shadow:0 12px 32px rgba(23,50,77,.10);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.8;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px, calc(100% - 40px));margin:auto}
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,0,0,.05);
+    }
+    .header-inner{
+      min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .brand{font-weight:800;color:var(--navy);letter-spacing:.04em;font-size:1.05rem}
+    nav{display:flex;gap:24px;align-items:center;font-size:.93rem}
+    nav a:hover{color:var(--navy2)}
+    .nav-cta,.btn-primary{
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--navy);color:#fff;border-radius:999px;
+      padding:11px 20px;font-weight:700;
+      transition:.2s ease;
+    }
+    .nav-cta:hover,.btn-primary:hover{transform:translateY(-1px);background:var(--navy2)}
+    .btn-secondary{
+      display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid var(--navy);color:var(--navy);
+      border-radius:999px;padding:11px 20px;font-weight:700;background:#fff;
+    }
+    .hero{
+      background:
+        radial-gradient(circle at 85% 10%, rgba(200,167,106,.18), transparent 30%),
+        linear-gradient(135deg,#f7fafc 0%,#eef3f7 100%);
+      padding:100px 0 90px;
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;
+    }
+    .eyebrow{color:var(--gold);font-weight:800;letter-spacing:.12em;font-size:.78rem}
+    h1{
+      margin:.25em 0 .45em;color:var(--navy);
+      font-size:clamp(2.3rem,5vw,4.5rem);line-height:1.22;letter-spacing:-.02em;
+    }
+    .hero p{font-size:1.06rem;color:#4d5b66;max-width:680px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .hero-card{
+      background:#fff;border-radius:28px;padding:34px;box-shadow:var(--shadow);
+      border:1px solid rgba(23,50,77,.08);
+    }
+    .hero-card h3{margin-top:0;color:var(--navy)}
+    .mini-list{display:grid;gap:14px;margin-top:20px}
+    .mini-item{display:flex;gap:12px;align-items:flex-start}
+    .check{
+      width:24px;height:24px;flex:0 0 24px;border-radius:50%;
+      background:rgba(200,167,106,.18);color:#8a6a30;
+      display:grid;place-items:center;font-weight:800;font-size:.8rem;margin-top:3px;
+    }
+    section{padding:88px 0}
+    .section-head{max-width:720px;margin:0 auto 46px;text-align:center}
+    .section-head h2{font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy);margin:.2em 0}
+    .section-head p{color:var(--muted);margin:0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{
+      border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;
+      box-shadow:0 8px 24px rgba(23,50,77,.05);
+    }
+    .card h3{color:var(--navy);margin-top:0}
+    .icon{
+      width:50px;height:50px;border-radius:14px;background:#edf3f7;color:var(--navy);
+      display:grid;place-items:center;font-size:1.35rem;margin-bottom:18px;
+    }
+    .bg-soft{background:var(--bg)}
+    .service-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .service-item{
+      display:flex;gap:18px;padding:24px;border:1px solid var(--line);
+      border-radius:16px;background:#fff;
+    }
+    .service-item strong{display:block;color:var(--navy);font-size:1.02rem}
+    .price-wrap{overflow:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
+    table{width:100%;border-collapse:collapse;min-width:680px}
+    th,td{padding:18px 20px;text-align:left;border-bottom:1px solid var(--line)}
+    th{background:#f4f7f9;color:var(--navy)}
+    tr:last-child td{border-bottom:none}
+    .profile{
+      display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:center;
+    }
+    .profile-photo{
+      min-height:360px;border-radius:28px;overflow:hidden;
+      background:#dfeaf5;box-shadow:var(--shadow);
+      border:1px solid rgba(23,50,77,.08);
+    }
+    .profile-photo img{
+      display:block;width:100%;height:100%;min-height:360px;
+      object-fit:cover;object-position:center;
+    }
+    .profile h2{color:var(--navy);font-size:2rem;margin-top:0}
+    .faq{max-width:860px;margin:auto;display:grid;gap:14px}
+    details{
+      border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fff;
+    }
+    summary{cursor:pointer;font-weight:700;color:var(--navy)}
+    details p{color:var(--muted);margin:12px 0 0}
+    .cta{
+      background:linear-gradient(135deg,var(--navy),#244d70);color:#fff;
+      border-radius:28px;padding:46px;text-align:center;
+    }
+    .cta h2{margin-top:0;font-size:2rem}
+    .cta p{color:#dfe8ef}
+    .cta .btn-primary{background:#fff;color:var(--navy)}
+    footer{
+      padding:44px 0;background:#10283e;color:#d6dee5;
+    }
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .footer-title{color:#fff;font-weight:800;margin-bottom:10px}
+    .small{font-size:.9rem;color:#9fb0bf}
+    @media(max-width:860px){
+      nav a:not(.nav-cta){display:none}
+      .hero{padding:70px 0}
+      .hero-grid,.profile{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .service-list{grid-template-columns:1fr}
+      .profile-photo{min-height:260px}
+      .footer-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .container{width:min(100% - 28px,1120px)}
+      .brand{font-size:.95rem}
+      .nav-cta{padding:9px 14px;font-size:.86rem}
+      .hero{padding:58px 0 64px}
+      .hero-card,.card{padding:24px}
+      section{padding:68px 0}
+      .cta{padding:34px 22px}
+    }
+
+    /* ブログ */
+    .blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+    .blog-card{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:#fff;box-shadow:0 8px 24px rgba(23,50,77,.05);display:flex;flex-direction:column;gap:12px}
+    .blog-card h3{font-size:1.15rem;line-height:1.5;color:var(--navy);margin:0}
+    .blog-card p{color:var(--muted);margin:0;flex:1;white-space:pre-wrap;overflow-wrap:anywhere}
+    .blog-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.86rem}
+    .blog-tag{background:#eef2f6;color:var(--navy);border-radius:999px;padding:2px 10px;font-weight:700}
+    .blog-read{color:var(--navy);font-weight:700;border:0;background:none;padding:0;cursor:pointer;text-align:left;align-self:start}
+    .blog-empty{grid-column:1/-1;text-align:center;color:var(--muted);background:#fff;border:1px dashed var(--line);padding:45px 20px;border-radius:var(--radius)}
+    .blog-dialog{width:min(700px,calc(100% - 32px));max-height:85vh;border:0;border-radius:20px;padding:32px;box-shadow:0 20px 80px #0004;color:var(--text)}
+    .blog-dialog::backdrop{background:rgba(13,35,55,.55)}
+    .blog-dialog h2{color:var(--navy);line-height:1.5;margin:12px 0}
+    .blog-dialog-body{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.95}
+    .blog-close{float:right;border:0;background:#eef2f6;color:var(--navy);padding:8px 15px;border-radius:99px;cursor:pointer}
+    #blog-admin{display:none;background:#edf3f7}
+    #blog-admin.is-open{display:block}
+    .blog-admin-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;max-width:800px;margin:auto}
+    .blog-admin-panel label{font-weight:700;color:var(--navy);display:block;margin:13px 0 5px}
+    .blog-admin-panel input,.blog-admin-panel textarea{width:100%;font:inherit;padding:11px 13px;border:1px solid #bdc8d2;border-radius:9px;background:white;color:var(--text)}
+    .blog-admin-panel textarea{min-height:160px;resize:vertical}
+    .blog-admin-panel .blog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+    .blog-admin-panel button{border:1px solid var(--navy);border-radius:999px;padding:10px 18px;cursor:pointer;font-weight:700;background:white;color:var(--navy)}
+    .blog-admin-panel button.primary{background:var(--navy);color:white}
+    .blog-admin-panel select{padding:10px;max-width:100%;border:1px solid #bdc8d2;border-radius:8px}
+    .blog-admin-note{font-size:.9rem;color:var(--muted)}
+    @media(max-width:860px){.blog-grid{grid-template-columns:1fr}}
+
+    /* 操作性・アクセシビリティ */
+    .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    :focus-visible{outline:3px solid #b58b39;outline-offset:4px}
+    .menu-toggle{display:none;border:1px solid var(--navy);background:white;border-radius:12px;color:var(--navy);padding:10px 14px;font-weight:700;font:inherit;cursor:pointer}
+    .blog-tools{display:flex;gap:12px;justify-content:center;margin:0 0 12px;flex-wrap:wrap}
+    .blog-tools input,.blog-tools select{font:inherit;background:#fff;border:1px solid #b4c2cf;border-radius:12px;padding:12px 14px;color:var(--text);min-height:48px}
+    .blog-tools input{flex:1 1 310px;max-width:570px}
+    .blog-tools select{flex:0 1 210px}
+    .blog-result{color:var(--muted);margin:0 0 20px;text-align:center;font-size:.92rem}
+    .blog-read{min-height:44px;display:inline-flex;align-items:center}
+    .blog-dialog{overscroll-behavior:contain}
+    .blog-dialog-body{font-size:1.04rem}
+    .contact-note{font-size:.85rem!important;color:#dfe8ef!important;margin:15px 0 0!important}
+    @media(max-width:860px){
+      .header-inner{position:relative;min-height:68px;gap:10px}
+      .menu-toggle{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+      #site-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:0 0 14px 14px;flex-direction:column;align-items:stretch;gap:0;padding:8px;z-index:1001}
+      #site-nav.is-open{display:flex}
+      #site-nav a,#site-nav a:not(.nav-cta){display:block;padding:12px 14px;border-radius:9px}
+      #site-nav .nav-cta{color:white;text-align:center}
+    }
+    @media(max-width:520px){.blog-tools{flex-direction:column}.blog-tools input,.blog-tools select{flex:none;width:100%;max-width:none}.blog-dialog{padding:22px}}
+  
+    /* Netlifyお問い合わせフォーム */
+    .contact-form-wrap{margin:26px auto 0;max-width:760px;text-align:left;background:#fff;color:var(--text);padding:clamp(22px,4vw,38px);border-radius:22px;box-shadow:var(--shadow)}
+    .contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+    .contact-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+    .contact-field.full,.contact-submit,.contact-agree{grid-column:1/-1}
+    .contact-field label,.contact-agree label{font-weight:700;color:var(--navy)}
+    .contact-field input,.contact-field select,.contact-field textarea{width:100%;font:inherit;color:var(--text);padding:11px 13px;border:1px solid #b8c5d0;border-radius:10px;background:#fff}
+    .contact-field textarea{min-height:150px;resize:vertical}
+    .contact-field input:focus-visible,.contact-field select:focus-visible,.contact-field textarea:focus-visible{outline:3px solid rgba(35,75,109,.22);border-color:var(--navy)}
+    .contact-required{color:#a33131;font-size:.8rem;margin-left:5px}
+    .contact-agree{display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
+    .contact-agree input{margin-top:7px;flex:none;width:17px;height:17px}
+    .contact-agree label{font-weight:400}
+    .contact-submit{display:flex;flex-direction:column;align-items:center;gap:8px}
+    .contact-submit button{border:0;cursor:pointer;font:inherit;min-width:230px}
+    .contact-submit small{color:var(--muted);text-align:center}
+    .contact-form-wrap .contact-intro{color:var(--muted);font-size:.92rem;margin:0 0 23px}
+    .contact-honeypot{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
+    @media(max-width:600px){.contact-form{grid-template-columns:1fr}.contact-field{grid-column:1/-1}}
+
+
+    /* 個人情報保護方針 */
+    .privacy-wrap{max-width:900px;margin:auto}
+    .privacy-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4vw,44px)}
+    .privacy-panel h3{font-size:1.08rem;color:var(--navy);margin:28px 0 6px}
+    .privacy-panel h3:first-child{margin-top:0}
+    .privacy-panel p{margin:0;color:#42505d}
+    .privacy-panel a,.privacy-anchor{color:var(--navy2);text-decoration:underline;text-underline-offset:3px}
+    .privacy-panel a:focus-visible,.privacy-anchor:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    #privacy{scroll-margin-top:85px}
+#blog-admin{display:none!important}
+#blog-admin{display:none!important}
+
+    /* ブログ専用ページの案内 */
+    #blog { min-height:55vh; padding-top:76px; }
+    .blog-page-return{text-align:center;margin:-16px 0 36px;}
+    .blog-page-return a{color:var(--navy2);text-decoration:underline;text-underline-offset:4px;font-weight:700;}
+    nav a[aria-current="page"]{font-weight:800;color:var(--navy2);}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="brand">山田勝隆税理士事務所</a>
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">☰ メニュー</button>
+    <nav id="site-nav">
+      <a href="index.html#strength">選ばれる理由</a>
+      <a href="index.html#service">業務内容</a>
+      <a href="index.html#corporate-closing">法人決算</a>
+      <a href="index.html#profile">事務所紹介</a>
+      <a href="blog.html" aria-current="page">ブログ</a>
+      <a href="index.html#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="blog" class="bg-soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">BLOG & NEWS</div>
+        <h2>税務・会計ブログ</h2>
+        <p>税務・会計の話題や、事務所からのお知らせ、日々の出来事をお届けします。</p>
+      </div>
+      <div class="blog-page-return"><a href="index.html">← トップページに戻る</a></div>
+      <div class="blog-tools" role="search" aria-label="ブログ記事を探す">
+        <label class="visually-hidden" for="blog-search">記事を検索</label>
+        <input id="blog-search" type="search" placeholder="キーワードで記事を検索" autocomplete="off">
+        <label class="visually-hidden" for="blog-filter">カテゴリー</label>
+        <select id="blog-filter"><option value="">すべてのカテゴリー</option></select>
+      </div>
+      <p id="blog-result" class="blog-result" aria-live="polite"></p>
+      <div id="blog-list" class="blog-grid" aria-live="polite"></div>
+      <details id="blog-archive" style="margin-top:28px" hidden>
+        <summary id="blog-archive-heading">過去のブログ</summary>
+        <div id="blog-archive-list" class="blog-grid" style="margin-top:20px"></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="blog-admin" aria-label="ブログ編集画面">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">BLOG EDITOR</div><h2>ブログ記事の編集</h2>
+        <p>この画面の変更は、このブラウザ内のプレビューです。「更新版HTMLを保存」してサイトにアップロードすると公開されます。</p>
+      </div>
+      <div class="blog-admin-panel">
+        <label for="blog-select">編集する記事</label>
+        <select id="blog-select"><option value="">新しい記事を作成</option></select>
+        <label for="blog-title">タイトル</label><input id="blog-title" maxlength="120" placeholder="例：年末調整の準備について">
+        <label for="blog-date">公開日</label><input id="blog-date" type="date">
+        <label for="blog-category">カテゴリー</label><input id="blog-category" maxlength="30" placeholder="税務情報・お知らせ など">
+        <label for="blog-summary">記事の概要（一覧に表示）</label><textarea id="blog-summary" maxlength="350" style="min-height:90px" placeholder="記事の概要を入力してください"></textarea>
+        <label for="blog-content">記事本文</label><textarea id="blog-content" placeholder="記事の本文を入力してください。改行も反映されます。"></textarea>
+        <div class="blog-actions">
+          <button type="button" class="primary" id="blog-save">記事を保存（プレビュー）</button>
+          <button type="button" id="blog-new">新規記事</button>
+          <button type="button" id="blog-delete">この記事を削除</button>
+        </div>
+        <hr style="border:0;border-top:1px solid var(--line);margin:26px 0">
+        <div class="blog-actions"><button type="button" class="primary" id="blog-export">更新版HTMLを保存</button>
+          <a href="#blog" class="btn-secondary">ブログ表示に戻る</a></div>
+        <p class="blog-admin-note">※公開中のサイトには自動反映されません。保存された <strong>blog.html</strong> を、現在のホームページのファイルと置き換えて再公開してください。公開サーバー上の変更は、次回編集時に最新のHTMLを使うことで保持できます。</p>
+        <p id="blog-feedback" role="status" class="blog-admin-note"></p>
+      </div>
+    </div>
+  </section>
+  <dialog id="blog-dialog" class="blog-dialog" aria-labelledby="blog-dialog-title">
+    <button type="button" id="blog-close" class="blog-close" aria-label="閉じる">閉じる ×</button>
+    <div id="blog-dialog-meta" class="blog-meta"></div>
+    <h2 id="blog-dialog-title"></h2>
+    <div id="blog-dialog-body" class="blog-dialog-body"></div>
+  </dialog>
+
+</main>
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-title">山田勝隆税理士事務所</div>
+      <div class="small">〒185-0022　東京都国分寺市東元町4-11-11</div>
+      <div class="small">TEL：080-5193-9161</div>
+      <div class="small">MAIL：yamada-kaikeijimusho@jcom.zaq.ne.jp</div>
+    </div>
+    <div class="small">
+      <div>営業時間：平日 9:00〜17:00</div>
+      <div>※ 土日祝・時間外は事前予約にて対応</div>
+      <div style="margin-top:12px;"><a class="privacy-anchor" style="color:#d6dee5" href="index.html#privacy">プライバシーポリシー</a></div>
+      <div style="margin-top:16px;">© 2026 山田勝隆税理士事務所</div>
+    </div>
+  </div>
+</footer>
+
+<script id="blog-data" type="application/json">[{"id":"2026-10-20-.md","title":"朝散歩","date":"2026-10-20","category":"その他","summary":"朝、外に出ると、ひんやりとした空気が頬に触れました。少し前までは歩き始めるとすぐに汗ばんでいたのに、今はその涼しさが心地よく感じられます。 この頃は、朝の散歩に出かける足取りも軽くなりました。暑すぎず、寒すぎず、歩くにはちょうどいい季節。いつもの道でも「今日はもう少し先まで行って…","content":"朝、外に出ると、ひんやりとした空気が頬に触れました。少し前までは歩き始めるとすぐに汗ばんでいたのに、今はその涼しさが心地よく感じられます。\n\nこの頃は、朝の散歩に出かける足取りも軽くなりました。暑すぎず、寒すぎず、歩くにはちょうどいい季節。いつもの道でも「今日はもう少し先まで行ってみようかな」と思えるから不思議です。\n\n道沿いの木々を見上げると、そろそろ紅葉の季節だなと楽しみになります。これから少しずつ葉の色が変わっていく様子を、毎朝眺められるのも散歩のいいところ。同じ道を歩いていても、小さな変化があれば飽きません。\n\n忙しい朝は、つい家の中だけで過ごしてしまいがちです。でも、ほんの10分でも外を歩くと、気持ちよく一日を始められる気がします。\n\n明日の朝は少しだけ早起きして、近所の公園まで足を延ばしてみようと思います。色づき始めた葉を見つけられたら、朝の楽しみがまたひとつ増えそうです。"},{"id":"2026-10-15-.md","title":"秋の訪れ","date":"2026-10-15","category":"その他","summary":"朝の散歩が気持ちのよい季節になりました。 ついこの間まで暑い日が続いていたように感じますが、朝晩はすっかり涼しくなり、少しずつ秋の深まりを感じるようになりました。 そんな朝の散歩で、ふと足を止めたくなる瞬間があります。 どこからともなく漂ってくる、金木犀の甘く優しい香りです。 姿…","content":"朝の散歩が気持ちのよい季節になりました。\n\nついこの間まで暑い日が続いていたように感じますが、朝晩はすっかり涼しくなり、少しずつ秋の深まりを感じるようになりました。\n\nそんな朝の散歩で、ふと足を止めたくなる瞬間があります。\n\nどこからともなく漂ってくる、金木犀の甘く優しい香りです。\n\n姿が見えなくても、その香りだけで「ああ、今年も秋が来たんだな」と感じさせてくれます。\n\nいつも歩いている道も、季節が変わると少し違って見えるものです。\n\n澄んだ空気、少しずつ色づく木々、そして金木犀の香り。\n\n慌ただしい毎日の中でも、朝の散歩は季節の移ろいを感じられる大切な時間になっています。\n\nこれから少しずつ寒くなっていきますが、短い秋を楽しみながら、日々を過ごしていきたいと思います。\n\n皆さまも、どうぞ体調にお気をつけてお過ごしください。"},{"id":"2026-10-09--1.md","title":"連休のお知らせ","date":"2026-10-09","category":"お知らせ","summary":"明日10/10より10/12まで、お休みをいただきます。 期間中はご不便をおかけしますが、何卒よろしくお願いいたします。 10/13より通常どおり再開いたしますので、またよろしくお願いいたします。","content":"明日10/10より10/12まで、お休みをいただきます。\n\n期間中はご不便をおかけしますが、何卒よろしくお願いいたします。\n\n10/13より通常どおり再開いたしますので、またよろしくお願いいたします。"},{"id":"2026-10-09-.md","title":"ブログを開設しました","date":"2026-10-09","category":"お知らせ","summary":"当事務所のブログを開設しました。税務・会計に関する情報や、事務所からのお知らせを随時発信してまいります。","content":"当事務所のブログを開設しました。税務・会計に関する情報や、事務所からのお知らせを随時発信してまいります。"}]</script>
+<script>
+(() => {
+  'use strict';
+  const dataNode = document.getElementById('blog-data');
+  let posts = [];
+  try { const parsed = JSON.parse(dataNode.textContent); if (Array.isArray(parsed)) posts = parsed; } catch(e) { console.warn('記事データを読み込めませんでした',e); }
+  const byId = id => document.getElementById(id);
+  const list = byId('blog-list');
+  const picker = byId('blog-select');
+  const fields = ['title','date','category','summary','content'];
+  const sortPosts = () => posts.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+  const el = (tag, text, className) => { const n = document.createElement(tag); if (text != null) n.textContent = text; if (className) n.className = className; return n; };
+  const searchField = byId('blog-search');
+  const categoryField = byId('blog-filter');
+  const categories = [...new Set(posts.map(p => p.category).filter(Boolean))].sort();
+  categories.forEach(c => categoryField.append(new Option(c,c)));
+  function render(){
+    list.replaceChildren();
+    const archive = byId('blog-archive');
+    const archiveList = byId('blog-archive-list');
+    archiveList.replaceChildren();
+    archive.hidden = true;
+    sortPosts();
+    const keyword = (searchField.value||'').trim().toLocaleLowerCase('ja');
+    const chosen = categoryField.value;
+    const visible = posts.filter(p => (!chosen || p.category===chosen) && (!keyword || [p.title,p.summary,p.content].join(' ').toLocaleLowerCase('ja').includes(keyword)));
+    const latest = visible.slice(0, 3);
+    const older = visible.slice(3);
+    archive.hidden = older.length === 0;
+    byId('blog-archive-heading').textContent = `過去のブログ（${older.length}件）`;
+    byId('blog-result').textContent = posts.length ? `${visible.length}件の記事：最新${visible.length - older.length}件を表示、過去${older.length}件` : '';
+    if (posts.length && !visible.length){list.append(el('p','該当する記事がありません。検索条件を変更してください。','blog-empty'));return;}
+    if (!posts.length) {list.append(el('p','記事は準備中です。公開までしばらくお待ちください。','blog-empty')); return;}
+    for (const post of visible){
+      const card=el('article',null,'blog-card');
+      const meta=el('div',null,'blog-meta');
+      meta.append(el('time',post.date||''));
+      if(post.category) meta.append(el('span',post.category,'blog-tag'));
+      card.append(meta,el('h3',post.title||''),el('p',post.summary||''));
+      const read=el('button','記事を読む →','blog-read');read.type='button';
+      read.addEventListener('click',()=>{
+        const m=byId('blog-dialog-meta');m.replaceChildren(el('time',post.date||''));
+        if(post.category)m.append(el('span',post.category,'blog-tag'));
+        byId('blog-dialog-title').textContent=post.title||'';
+        byId('blog-dialog-body').textContent=post.content||'';
+        byId('blog-dialog').showModal();
+      });
+      card.append(read);(latest.includes(post) ? list : archiveList).append(card);
+    }
+  }
+  searchField.addEventListener('input',render);
+  categoryField.addEventListener('change',render);
+  function refreshPicker(selected=''){
+    picker.replaceChildren(new Option('新しい記事を作成',''));
+    for(const p of posts) picker.append(new Option(`${p.date||'日付なし'}｜${p.title}`,p.id));
+    picker.value=selected;
+  }
+  function clearEditor(){picker.value='';for(const f of fields)byId('blog-'+f).value='';byId('blog-date').value=new Date().toLocaleDateString('sv-SE');}
+  function showSelected(){const p=posts.find(x=>x.id===picker.value);if(!p){clearEditor();return;}for(const f of fields)byId('blog-'+f).value=p[f]||'';}
+  function message(m){byId('blog-feedback').textContent=m;}
+  byId('blog-save').addEventListener('click',()=>{
+    const values=Object.fromEntries(fields.map(f=>[f,byId('blog-'+f).value.trim()]));
+    if(!values.title||!values.date||!values.content){message('タイトル・公開日・本文を入力してください。');return;}
+    const id=picker.value||('p'+Date.now().toString(36)+Math.random().toString(36).slice(2,8));
+    const existing=posts.findIndex(p=>p.id===id);
+    if(existing>=0)posts[existing]={id,...values};else posts.push({id,...values});
+    render();refreshPicker(id);message('記事をプレビューに保存しました。公開するには「更新版HTMLを保存」を押してください。');
+  });
+  byId('blog-new').addEventListener('click',()=>{clearEditor();message('新しい記事を入力してください。');});
+  byId('blog-delete').addEventListener('click',()=>{
+    const id=picker.value;if(!id){message('削除する記事を選んでください。');return;}
+    if(!confirm('この記事を削除しますか？'))return;
+    posts=posts.filter(p=>p.id!==id);render();refreshPicker();clearEditor();message('プレビューから削除しました。公開にはHTMLの保存・再アップロードが必要です。');
+  });
+  byId('blog-export').addEventListener('click',()=>{
+    // 画像データや既存構成を保ちながら、記事JSONだけ差し替えます。
+    const clone=document.documentElement.cloneNode(true);
+    const serialized=JSON.stringify(posts).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
+    clone.querySelector('#blog-data').textContent=serialized;
+    clone.querySelector('#blog-admin').classList.remove('is-open');
+    const html='<!DOCTYPE html>\n'+clone.outerHTML;
+    const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=url;a.download='blog.html';document.body.append(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),2000);
+    message('blog.html を保存しました。これを公開先へアップロードすると記事が反映されます。');
+  });
+  byId('blog-close').addEventListener('click',()=>byId('blog-dialog').close());
+  function route(){byId('blog-admin').classList.toggle('is-open',location.hash==='#blog-admin');}
+  window.addEventListener('hashchange',route);
+  render();refreshPicker();clearEditor();route();
+})();
+</script>
+<script>
+(()=>{
+ const toggle=document.getElementById('menu-toggle');
+ const nav=document.getElementById('site-nav');
+ if(!toggle||!nav)return;
+ function close(){nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰ メニュー';}
+ toggle.addEventListener('click',()=>{const opening=!nav.classList.contains('is-open');nav.classList.toggle('is-open',opening);toggle.setAttribute('aria-expanded',String(opening));toggle.textContent=opening?'× 閉じる':'☰ メニュー';});
+ nav.addEventListener('click',e=>{if(e.target.closest('a'))close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
