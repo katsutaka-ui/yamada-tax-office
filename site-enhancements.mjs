@@ -71,10 +71,41 @@ for (const which of ['home','blog']) {
   if (which === 'home') home = withSkip; else blog = withSkip;
 }
 
+// 主な対象エリアは都内・多摩地区。国分寺市は所在地として控えめに表記する。
+// meta keywords ではなく、ページタイトルと説明文を自然な日本語に整える。
+const setSearchMetadata = (html, {title, description}, label) => {
+  const fields = [
+    [/<title>[^<]*<\/title>/i, `<title>${escapeHtml(title)}</title>`, 'title'],
+    [/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${escapeHtml(description)}">`, 'description'],
+    [/<meta property="og:title" content="[^"]*"\s*\/?>/i, `<meta property="og:title" content="${escapeHtml(title)}">`, 'og:title'],
+    [/<meta property="og:description" content="[^"]*"\s*\/?>/i, `<meta property="og:description" content="${escapeHtml(description)}">`, 'og:description'],
+  ];
+  for (const [pattern, replacement, field] of fields) {
+    if (!pattern.test(html)) throw new Error(`${label} の ${field} が見つかりません`);
+    html = html.replace(pattern, replacement);
+  }
+  return html;
+};
+
+home = setSearchMetadata(home, {
+  title: '都内・多摩地区の中小企業向け税務・会計｜山田勝隆税理士事務所',
+  description: '都内・多摩地区の中小企業・個人事業主の税務・会計をサポート。法人決算・法人税申告、記帳代行、税務顧問、確定申告に対応する山田勝隆税理士事務所（東京都国分寺市）。',
+}, 'トップページ');
+blog = setSearchMetadata(blog, {
+  title: '税務・会計のブログ・お知らせ｜山田勝隆税理士事務所',
+  description: '都内・多摩地区の中小企業・個人事業主に役立つ税務・会計の話題、事務所からのお知らせや日々の出来事を発信する山田勝隆税理士事務所のブログ。',
+}, 'ブログ');
+
+// 所在地はフッターや構造化データに残し、冒頭では対象地域を優先する。
+home = requireReplace(home,
+  '東京都国分寺市を拠点に、都内・多摩地区の税務・会計を支える山田勝隆税理士事務所です。',
+  '都内・多摩地区の中小企業・個人事業主の税務・会計を支える山田勝隆税理士事務所です。',
+  '冒頭の事務所案内');
+
 // トップページ：ご相談内容がすぐ分かる見出しと、根拠のある案内にする。
 home = requireReplace(home,'<main>','<main id="main-content">','トップ main');
 home = requireReplace(home,'<h1>中小企業の<br>税務・会計をサポート</h1>',
-  '<h1>国分寺市の税理士<br>法人決算・税務顧問を<br>サポートします</h1>', '見出し');
+  '<h1>都内・多摩地区の<br>中小企業を税務・会計で<br>サポート</h1>', '見出し');
 home = requireReplace(home,'<a class="btn-primary" href="#contact">無料相談を申し込む</a>',
   '<a class="btn-primary" href="#contact">税務・会計について相談する</a>', 'CTA');
 home = requireReplace(home,'<div class="hero-actions">\n', '<div class="hero-actions">\n', 'hero-actions');
@@ -92,14 +123,14 @@ home = requireReplace(home, '</div>\n      </div>\n\n      <div class="hero-card
 
 const proof = `<aside class="proof-strip" aria-label="事務所の基本情報">
   <div class="container">
-    <span class="proof-item">東京都国分寺市の税理士事務所</span>
+    <span class="proof-item">都内・多摩地区の税務・会計に対応</span>
     <span class="proof-item">東京税理士会 立川支部</span>
     <span class="proof-item">税理士登録番号 98674</span>
   </div>
 </aside>`;
 home = injectAfterSection(home, '<section class="hero">', proof, 'hero');
 
-const locationInfo = `<p class="area-note"><strong>国分寺市・多摩地区からのご相談に対応しています。</strong>
+const locationInfo = `<p class="area-note"><strong>都内・多摩地区からのご相談に対応しています。</strong>
 法人決算・法人税申告、記帳代行、税務顧問、個人の確定申告など、現在の状況に合わせて業務範囲をご案内します。オンラインでのご相談も可能です。</p>`;
 home = requireReplace(home,
   '      </div>\n    </div>\n  </section>\n\n\n  <section id="corporate-closing">',
